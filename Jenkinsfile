@@ -12,6 +12,5 @@ pipeline {
             //Actions post-build
     }
     nodejs "NodeJS 20"
-    tools {
-    }
+
 }
