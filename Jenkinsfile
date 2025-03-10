@@ -1,17 +1,21 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "NodeJS 20"
+    }
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building the application '
+                echo 'Building the application'
             }
         }
     }
+
     post {
-            //Actions post-build
-    }
-    tools {
-        nodejs "NodeJS 20"
+        always {
+            echo 'Pipeline terminé'
+        }
     }
 }
